@@ -34,6 +34,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'dstein64/nvim-scrollview'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
 
@@ -51,4 +55,6 @@ nnoremap <silent> gd :<C-u>call CocActionAsync('jumpDefinition')<CR>
 nnoremap gb :bp<CR>
 nnoremap gf :bn<CR>
 nnoremap gx :bd<CR>
-
+lua << END
+require('lualine').setup()
+END
