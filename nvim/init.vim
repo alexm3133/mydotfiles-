@@ -20,11 +20,9 @@ filetype plugin on
 set ttyfast
 set smartindent
 
-
 "Plugins
 
 call plug#begin()
-
 
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'preservim/nerdcommenter'
@@ -36,15 +34,18 @@ Plug 'dstein64/nvim-scrollview'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lualine/lualine.nvim'
-" If you want to have icons in your statusline choose one of these
 Plug 'nvim-tree/nvim-web-devicons'
-
+Plug 'alexm3133/codeshade'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
 call plug#end()
+
 
 "settings after plugin
 
 colorscheme catppuccin-mocha
 let g:scrollview_autozindex = 1
+
 "Keymaps
 
 nnoremap <C-s> :w<CR>
@@ -55,6 +56,9 @@ nnoremap <silent> gd :<C-u>call CocActionAsync('jumpDefinition')<CR>
 nnoremap gb :bp<CR>
 nnoremap gf :bn<CR>
 nnoremap gx :bd<CR>
+nnoremap <C-f> :Telescope find_files<CR>
+nnoremap <C-g> :Telescope live_grep<CR>
 lua << END
 require('lualine').setup()
+require('codeshade')
 END
