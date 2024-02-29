@@ -1,5 +1,3 @@
-My Neovim Configuration
-
 Hey there! 
 
 This repository contains my personal Neovim configurations. Feel free to explore, use, or modify these configurations to fit your own development environment.
@@ -20,14 +18,14 @@ Installation
 
 To use these configurations:
 
-    Ensure Neovim (version 0.5 or later) is installed on your system.
-    Clone this repository into your Neovim configuration directory:
+Ensure Neovim (version 0.5 or later) is installed on your system.
+Clone this repository into your Neovim configuration directory:
 
-bash
 
-git clone https://github.com/alexm3133/neovim-config.git ~/.config/nvim
+    git clone https://github.com/alexm3133/neovim-config.git ~/.config/nvim
 
-    Open Neovim and run :PackerInstall to install the plugins.
+Open Neovim and run 
+    :PackerInstall 
 
 
 Customization
