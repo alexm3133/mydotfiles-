@@ -8,11 +8,11 @@ These configurations are structured to enhance my development workflow with Neov
 Highlights
 
 
-    Plugin Management: Utilizes packer.nvim for efficient plugin management.
-    File Navigation: Enhanced with nvim-tree and supported by nvim-web-devicons for a visually appealing file explorer.
-    Key Mappings: Custom key bindings to streamline common tasks and navigation.
+Plugin Management: Utilizes packer.nvim for efficient plugin management.
+File Navigation: Enhanced with nvim-tree and supported by nvim-web-devicons for a visually appealing file explorer.
+Key Mappings: Custom key bindings to streamline common tasks and navigation.
 
-    Visual Enhancements: Color schemes and UI tweaks for better readability and aesthetics.
+Visual Enhancements: Color schemes and UI tweaks for better readability and aesthetics.
 
 Installation
 
@@ -25,8 +25,8 @@ Clone this repository into your Neovim configuration directory:
     git clone https://github.com/alexm3133/neovim-config.git ~/.config/nvim
 
 Open Neovim and run 
+    
     :PackerInstall 
-
 
 Customization
 
