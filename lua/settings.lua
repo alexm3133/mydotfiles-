@@ -15,7 +15,10 @@ set.clipboard = 'unnamedplus'
 set.ttyfast = true
 set.smartindent = true
 set.termguicolors = true
-
+--vim.o.background = 'dark'
+--vim.cmd [[colorscheme gruvbox]]
+vim.opt.termguicolors = true
+vim.cmd.colorscheme 'melange'
 vim.cmd [[
     syntax on
     filetype plugin indent on

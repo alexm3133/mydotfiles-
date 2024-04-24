@@ -1,3 +1,5 @@
+vim.api.nvim_create_user_command('Ps', require('packer').sync, {})
+
 local map = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
@@ -11,4 +13,5 @@ map('n', 'gf', ':bn<CR>', opts)
 map('n', 'gx', ':bd<CR>', opts)
 map('n', '<C-f>', ':Telescope find_files<CR>', opts)
 map('n', '<C-g>', ':Telescope live_grep<CR>', opts)
+map('n', '<C-p>', ':Ps<CR>', opts) 
 
