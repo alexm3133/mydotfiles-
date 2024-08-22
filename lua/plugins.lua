@@ -2,10 +2,10 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim' -- Gestor de paquetes
-    use {'rose-pine/neovim', as = 'rose-pine', config = function() require('plugin-config/rose-pine') end}
+    --use {'rose-pine/neovim', as = 'rose-pine', config = function() require('plugin-config/rose-pine') end}
     --use {'preservim/nerdtree', cmd = 'NERDTreeToggle'}
     use 'preservim/nerdcommenter'
-    --use 'morhetz/gruvbox'
+    use 'morhetz/gruvbox'
     --use {'dracula/vim', as = 'dracula'}
     use {'neoclide/coc.nvim', branch = 'release'}
     use 'octol/vim-cpp-enhanced-highlight'
@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-tree/nvim-tree.lua'    
+    use 'savq/melange-nvim'
     if packer_bootstrap then
         require('packer').sync()
     end
