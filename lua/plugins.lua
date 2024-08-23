@@ -9,6 +9,9 @@ return require('packer').startup(function(use)
     --use {'dracula/vim', as = 'dracula'}
     use {'neoclide/coc.nvim', branch = 'release'}
     use 'octol/vim-cpp-enhanced-highlight'
+    use 'neovim/nvim-lspconfig' -- Configuración básica de LSP
+    use 'hrsh7th/nvim-cmp'      -- Autocompletado
+    use 'hrsh7th/cmp-nvim-lsp'  -- Completar con LSP
     use 'dstein64/nvim-scrollview'
     --use {'catppuccin/nvim', as = 'catppuccin'}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -18,7 +21,11 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-tree/nvim-tree.lua'    
+    use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+    use 'romgrk/barbar.nvim'
     use 'savq/melange-nvim'
+    use 'mbbill/undotree'
+    use 'tpope/vim-fugitive'
     if packer_bootstrap then
         require('packer').sync()
     end
