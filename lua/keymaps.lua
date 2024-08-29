@@ -2,7 +2,6 @@ vim.api.nvim_create_user_command('Ps', require('packer').sync, {})
 local map = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
--- Existing mappings
 map('n', '<C-s>', ':w<CR>', opts)
 map('n', '<C-n>', ':NvimTreeOpen<CR>', opts)
 map('n', '<C-c>', '<Plug>NERDCommenterToggle', opts)

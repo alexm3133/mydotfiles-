@@ -3,6 +3,7 @@ require('keymaps')
 require('plugins')
 require('lsp')
 require('/plugin-config/nvim-tree')
+require('/plugin-config/gitsigns')
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.html.setup{}
 --require('/plugin-config/colors')
