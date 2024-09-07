@@ -95,7 +95,7 @@ _G.packer_plugins = {
     url = "https://github.com/alexm3133/codeshade"
   },
   ["gitsigns.nvim"] = {
-    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
+    config = { "\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27plugin-config/gitsigns\frequire\0" },
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
@@ -124,6 +124,19 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-jdtls"] = {
+    config = { "\27LJ\2\nñ\6\0\0\b\0\21\0*6\0\0\0'\2\1\0B\0\2\0026\1\2\0009\1\3\1'\3\4\0B\1\2\2\18\2\1\0'\3\5\0006\4\6\0009\4\a\0049\4\b\0046\6\6\0009\6\a\0069\6\t\6B\6\1\2'\a\n\0B\4\3\2&\2\4\0025\3\14\0005\4\v\0\18\5\1\0'\6\f\0&\5\6\5>\5\n\4\18\5\1\0'\6\r\0&\5\6\5>\5\f\4>\2\14\4=\4\15\0036\4\0\0'\6\16\0B\4\2\0029\4\17\0045\6\18\0B\4\2\2=\4\19\0039\4\20\0\18\6\3\0B\4\2\1K\0\1\0\20start_or_attach\rroot_dir\1\4\0\0\fgradlew\tmvnw\t.git\14find_root\16jdtls.setup\bcmd\1\0\2\rroot_dir\0\bcmd\0\\/alexcode/gits/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/config_linuxè\1/alexcode/gits/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar\1\14\0\0\tjava6-Declipse.application=org.eclipse.jdt.ls.core.id1'-Dosgi.bundles.defaultStartLevel=46-Declipse.product=org.eclipse.jdt.ls.core.product\24-Dlog.protocol=true\20-Dlog.level=ALL\v-Xms1g\v-Xmx2G\t-jar\0\19-configuration\0\n-data\v:p:h:t\vgetcwd\16fnamemodify\afn\bvim\16/workspace/\tHOME\vgetenv\aos\njdtls\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/opt/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -179,14 +192,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-javacomplete2"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-javacomplete2",
+    url = "https://github.com/artur-shaik/vim-javacomplete2"
   }
 }
 
 time([[Defining packer_plugins]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+try_loadstring("\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27plugin-config/gitsigns\frequire\0", "config", "gitsigns.nvim")
 time([[Config for gitsigns.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType java ++once lua require("packer.load")({'nvim-jdtls'}, { ft = "java" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
