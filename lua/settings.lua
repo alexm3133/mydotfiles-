@@ -18,7 +18,8 @@ set.termguicolors = true
 vim.o.background = 'dark'
 --vim.cmd [[colorscheme gruvbox]]
 vim.opt.termguicolors = true
-vim.cmd.colorscheme 'melange'
+--vim.cmd.colorscheme 'melange'
+vim.cmd("colorscheme kanagawa-dragon")
 vim.cmd [[
     syntax on
     filetype plugin indent on

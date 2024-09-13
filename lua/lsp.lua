@@ -2,7 +2,7 @@
 local lspconfig = require('lspconfig')
 
 -- Configuración para TypeScript
-lspconfig.tsserver.setup {}
+lspconfig.ts_ls.setup {}
 
 -- Configuración para Angular
 lspconfig.angularls.setup {}

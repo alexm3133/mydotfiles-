@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'nvim-tree/nvim-tree.lua'    
     use 'romgrk/barbar.nvim'
+    use 'rebelot/kanagawa.nvim'
     use 'savq/melange-nvim'
     use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
